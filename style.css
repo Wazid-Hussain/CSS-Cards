@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #222138;
+}
+.container{
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box{
+    width: 25%;
+    text-align: center;
+    padding: 20px 10px;
+    /* background-color: #fff; */
+    overflow: hidden;
+    transition: all 0.1s;
+    border-radius: 20px;
+}
+.num{
+    background-color: #fff;
+    color: #222138;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.4em monospace;
+    position: relative;
+}
+.box:nth-child(1) .num::after{
+    content: '';
+    position: absolute;
+    left: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.box:nth-child(2) .num::after{
+    content: '';
+    position: absolute;
+    left: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.box:nth-child(2) .num::before{
+    content: '';
+    position: absolute;
+    right: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.box:nth-child(3) .num::after{
+    content: '';
+    position: absolute;
+    left: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.box:nth-child(3) .num::before{
+    content: '';
+    position: absolute;
+    right: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.box:nth-child(4) .num::before{
+    content: '';
+    position: absolute;
+    right: 150%;
+    width: 200px;
+    height: 0;
+    border-top: 1px dashed #fff;
+}
+.title{
+    color: #fff;
+    font: 1.5em monospace;
+    margin: 15px auto;
+}
+.desc{
+    color: #fff;
+    font: 1em monospace;
+    margin: 15px 30px 50px;
+}
+.box:hover{
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 1px rgba(114, 114, 114, 0.8);
+}
+.box:hover .num{
+    background-color: #222138;
+    box-shadow: 0px 0px 20px 1px rgba(114, 114, 114, 0.8);
+    color: #fff;
+}
+.box:hover .title, .box:hover .desc{
+    color: #222138;
+}
+.box:hover  .num::after, .box:hover  .num::before{    
+    content: '';
+    border-top: 1px dashed #222138;
+}
